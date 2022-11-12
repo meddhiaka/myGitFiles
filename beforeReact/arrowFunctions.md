@@ -64,7 +64,6 @@ const square = (a) => {
 
 ```javascript
 const anonFun = (a,b) => a+b;
-}
 ```
 
 
