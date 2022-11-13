@@ -1,9 +1,19 @@
-// import person from './person.js';
+const x = 1
 
-// person('dhia', 20)
+let computeSum = new Promise(function (resolve, reject){   
+    let sum = 1
+    for(let i =1; i<10_000_000; i++){
+        sum+=i
+    }
+    resolve(sum)
+})
 
-const helloWorld = () => console.log("hello world")
+computeSum.then( (data) => {
+    console.log(data)
+})
 
-let x = setTimeout(helloWorld, 3000)
+function after(){
+    console.log("hello world")
+}
 
-x
+after()
