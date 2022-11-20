@@ -193,6 +193,39 @@ helloWorld("dhia", anotherFun)
 <hr>
 
 
+# Map, Filter in JavaScript
+
+```javascript
+const info = [
+    {data : "hello one", value: 1},
+    {data : "hello two", value: 2},
+    {data : "hello three", value: 1},
+]
+
+const resultMap = info.map(x => `${x.data}, now bye`)
+const resultFilter = info.filter(x => x.value === 1)
+
+console.log(resultMap)
+console.log(resultFilter)
+```
+
+# Some array methods
+
+```javascript
+const elt = ["med", "dhia", "kassab"]
+
+const A = elt.join(" _ ")
+// result b : med _ dhia _ kassab
+
+const B = elt.concat(["amen", "allah"])
+console.log(B)
+// result b : ["med", "dhia", "kassab", "amen", "allah"]
+
+const C = elt.sort()
+console.log(C)
+// result c : [ 'dhia', 'kassab', 'med' ]
+
+```
 
 # JavaScript Promise
 
