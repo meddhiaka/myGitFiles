@@ -227,7 +227,7 @@ console.log(C)
 
 ```
 
-# JavaScript Promise
+# JavaScript Promises
 
 ```javascript
 const x = 1
@@ -250,11 +250,33 @@ function after(){
 
 after()
 ```
+# JavaScript Promises, Await v2
+### Promises can be 3 typos ...
+* Pending: Waiting for the value
+* Fulfilled: AKA resolved, Got the value
+* Rejected: Couldn't get the value.
 
+```javascript
+    let a = await fetch("https://dog.ceo/api/breed/hound/list")
+    let b = await a.json()
+    console.log(a)
+```
 
+#### *is equivalent to*
+```javascript
+    let a = fetch("https://dog.ceo/api/breed/hound/list").then((value) => console.log(value))
+```
 
+# Asynchronous Functions
+```javascript
+async function getData(url){
+    let data = await fetch(url)
+    data = await data.json()
+    return data
+}
 
-
+console.log(await getData("https://dog.ceo/api/breed/hound/list"))
+```
 
 
 

@@ -1,3 +1,7 @@
-console.log("we first")
-setTimeout(x => console.log("we third"), 500)
-console.log("we second")
+// let a = await fetch("https://dog.ceo/api/breed/hound/list")
+// let b = await a.json()
+// console.log(a)
+
+import { helloWorld } from "./person.js";
+
+helloWorld()
