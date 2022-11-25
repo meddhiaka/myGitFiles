@@ -2,7 +2,7 @@
 
 
 
-### * the simple function
+###  the simple function
 
 ```javascript
 function fn(x){
@@ -10,7 +10,7 @@ function fn(x){
 }
 ```
 
-## * the arrow function after conversion 
+##  the arrow function after conversion 
 
 ```javascript
 (x) => {
@@ -24,7 +24,7 @@ function fn(x){
 
 <hr>
 
-### * to reuse an arrow function just :
+###  to reuse an arrow function just :
 
 ```javascript
 const newFn = (x) => {
