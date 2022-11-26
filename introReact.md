@@ -58,20 +58,31 @@ const renderedApp = React.createElement(App)
 ReactDOM.render( renderedApp, document.getElementById("root"))
 ```
 
-# 3) JavaScript TOOLS
-* NPM:
+# 2) JSX
+* You should take care of self closing tags with the ending slash
+```jsx
+    <aSelfClosingtag />
 ```
-npm init -y
-npm install -D prettier //Saving it in dependencies ...
+* An example of a JSX piece
+```jsx
+const App = () => {
+    <div>
+        <h1>Hello World</h1>
+    </div>
+}
 ```
-<hr>
-* Prettier:
-```perl
-Within package.json:
-"scripts":{
-    "format": "prettier --write \"src/**/{*.js, *,jsx}\" "
-    }
-And then:
-npm run format
+* Class is a class in JSX but className is :)
+for example
+```jsx
+const a = () => {
+    return (
+        <div>
+            <h1 class="hello" className="realHello">HTML is not JSX</h1>
+        </div>
+    )
+}
+
+class hello {
+
+}
 ```
-<hr>
