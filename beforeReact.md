@@ -86,7 +86,47 @@ const x = 99
 
 <hr>
 
+# Working with Objects
 
+#### Creating an Object through a function
+
+```javascript
+function Person(name, age, sex){
+    this.name = name
+    this.age = age
+    this.sex = sex
+}
+
+const Dhia = new Person('Med Dhia Kassab', 20, "Male")
+
+console.log(`${Dhia.name}`, `${Dhia.age}`, `${Dhia.sex}`)
+```
+
+#### Object Keys, Values and Entries
+
+
+```javascript
+const DhiaKeys = Object.keys(Dhia)
+console.log(DhiaKeys)
+// Output: [ 'name', 'age', 'sex' ]
+
+const DhiaValues = Object.values(Dhia)
+console.log(DhiaValues)
+// Output: [ 'Med Dhia Kassab', 20, 'Male' ]
+
+const DhiaEntries = Object.entries(Dhia)
+console.log(DhiaEntries)
+// Output: [ [ 'name', 'Med Dhia Kassab' ], [ 'age', 20 ], [ 'sex', 'Male' ] ]
+```
+
+#### Looping through an Object
+
+```javascript
+
+```
+
+
+<hr>
 
 # Classes
 
