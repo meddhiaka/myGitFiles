@@ -86,3 +86,22 @@ class hello {
 
 }
 ```
+
+# 3) React Hooks
+
+#### every hook starts with the work ''use''
+
+* useState() hook
+At first, we're gonna import that hook by
+```javascript
+import { useState } form "react"
+
+const [count, setCount] = useState(0)
+
+return (
+    <div>
+        <p> You clicked {count} times</p>
+        <button onClick={() => setCount(count+1)}>Click here</button>
+    </div>
+)
+```
