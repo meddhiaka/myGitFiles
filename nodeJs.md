@@ -58,3 +58,55 @@ for(let key in data){
 
 writeFile(new URL('./newIndex.html', import.meta.url), template)
 ```
+
+<br><br>
+
+## Catching errors in Async & Sync functions
+
+*Suppose that indexxx.html does not exist...*
+
+##### Sync functions
+
+```javascript
+import { readFile } from 'fs'
+
+const result = readFile(new URL('./indexxx.html', import.meta.url), 'utf-8', (err, data) => {
+    if (err) {
+        console.log(err)
+    } else {
+        console.log('there is no errors')
+    }
+})
+```
+
+<br>
+
+##### Async functions
+
+* First way
+
+```javascript
+import 'readFile' from 'fs/promises'
+
+const result = await readFile(new URL('./indexxxxx.html', import.meta.url), 'utf-8').catch( e => {
+    if (e) {
+        console.log(e)
+    }
+    else {
+        console.log('there is no erros')
+    }
+})
+```
+
+* Second way
+
+```javascript
+import 'readFile' from 'fs/promises'
+
+try{
+    const result = await readFile(new URL('./indexxx.html', import.meta.url), 'utf-8')
+}
+catch (e) {
+    console.log(e)
+}
+```
