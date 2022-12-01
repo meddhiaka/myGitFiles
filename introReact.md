@@ -104,3 +104,46 @@ root.render(
 
 
 <hr>
+
+# 4) Working with Images in ReactJS
+
+* First of all, img element is a closing tag
+* src attribute in the img element looks like an object **calling for a component (without extension)** , or We can use this alternative **Calling directly for the image file using require method :**
+
+```javascript
+    <img src={require('Logo.png')} alt='Logo'/>
+```
+
+* We can put directly the src image if the image is from the www (internet), example:
+```javascript
+    <img src='https://www.google.com/theImgStuff.png' alt='imgStuff' />
+```
+* alt attribute is obliged to write
+* Explanation **(calling for a component (without img extension)):**
+
+```javascript
+// App.js :
+import Logo from './Logo.svg'
+
+function App() {
+    return (
+        <div>
+            <h1>Hello world</h1>
+            <img src={Logo} alt='Logo'/>
+        </div>
+    )
+}
+
+// index.js
+import App from './App'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import './index.css'
+
+const root = ReactDOM.createRoot(document.getElementById(root))
+root.render(
+    <div>
+        <App />
+    </div>
+)
+```
