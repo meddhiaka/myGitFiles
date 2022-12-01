@@ -116,7 +116,7 @@ root.render(
     <img src={require('Logo.png')} alt='Logo'/>
 ```
 
-* We can put directly the src image if the image is from the www (internet), example:
+* We can put directly the src image url if the image src is external, example:
 ```javascript
     <img src='https://www.google.com/theImgStuff.png' alt='imgStuff' />
 ```
