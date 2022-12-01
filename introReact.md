@@ -26,6 +26,29 @@
 ```
 
 <hr>
+# 2) React Render with the permanent way
+# Just ignore the last one.
+
+```javascript
+// After creating a file named ` App.js `, then
+// App.js :
+function App() {
+    return (
+        <div>Hello world.</div>
+    )
+}
+// Use the file name without the extension as the component. 
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App'
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(
+    <App />
+)
+```
+
+<hr> 
 # 2) React Props
 
 ```javascript
