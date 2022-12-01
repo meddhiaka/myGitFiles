@@ -26,7 +26,9 @@
 ```
 
 <hr>
+
 # 2) React Render with the permanent way !!!!!
+
 # Just ignore the last one !!!!
 
 ```javascript
