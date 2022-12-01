@@ -1,4 +1,4 @@
-# 1) React & ReactDOM idea
+# 1) React & ReactDOM idea (ignored)
 ### CDN links
 ```
 <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
@@ -26,8 +26,8 @@
 ```
 
 <hr>
-# 2) React Render with the permanent way
-# Just ignore the last one.
+# 2) React Render with the permanent way !!!!!
+# Just ignore the last one !!!!
 
 ```javascript
 // After creating a file named ` App.js `, then
@@ -49,82 +49,58 @@ root.render(
 ```
 
 <hr> 
-# 2) React Props
+
+# 3) Multi components and the div trick.
+
+##### We're gonna Create two components and another empty css file, Here we go ...
 
 ```javascript
-const Pet = (props) => {
-    return React.createElement(
-        "div",
-        null,
-        [
-            React.createElement("h2", null, props.firstStuff),
-            React.createElement("h2", null, props.secondStuff),
-            React.createElement("h2", null, props.thirdStuff)
-        ]
-    )
-}
-
-const App = () => {
-    return React.createElement(
-        "div",
-        null,
-        React.createElement(Pet, {
-            firstStuff: "hello world",
-            secondStuff: "thank you",
-            thirdStuff: "goodBye"
-        })
-    )
-}
-
-const renderedApp = React.createElement(App)
-
-ReactDOM.render( renderedApp, document.getElementById("root"))
-```
-
-# 2) JSX
-* You should take care of self closing tags with the ending slash
-```jsx
-    <aSelfClosingtag />
-```
-* An example of a JSX piece
-```jsx
-const App = () => {
-    <div>
-        <h1>Hello World</h1>
-    </div>
-}
-```
-* Class is a class in JSX but className is :)
-for example
-```jsx
-const a = () => {
+// style.css && index.css ( empty files )
+// Header.js
+function  Header() {
     return (
         <div>
-            <h1 class="hello" className="realHello">HTML is not JSX</h1>
+            <ul>
+                <li>Home</li>
+                <li>Services</li>
+                <li>Career</li>
+                <li>About</li>
+            </ul>
         </div>
     )
 }
+export default Header
 
-class hello {
-
+// App.js
+function App() {
+    return (
+        <div>
+            <h1>I'm</h1>
+            <h2>Med</h2>
+            <h3>Dhia</h3>
+            <h4>Kassab</h4>
+        </div>
+    )
 }
-```
+export default App
 
-# 3) React Hooks
+// index.js
+import react from 'react'
+import ReactDOM from 'react-dom/client'
+import './index.css'
+import './style.css'
+import App from './App'
+import Header from './Header'
 
-#### every hook starts with the work ''use''
-
-* useState() hook
-At first, we're gonna import that hook by
-```javascript
-import { useState } form "react"
-
-const [count, setCount] = useState(0)
-
-return (
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(
     <div>
-        <p> You clicked {count} times</p>
-        <button onClick={() => setCount(count+1)}>Click here</button>
+        <Header />
+        <App />
     </div>
 )
 ```
+
+
+
+<hr>
