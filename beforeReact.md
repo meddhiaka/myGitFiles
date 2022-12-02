@@ -86,6 +86,37 @@ const x = 99
 
 <hr>
 
+# DOM
+
+#### Browsing into the document 
+
+* Popular DOM methods are `document.getElementById()` , `document.getElementsByClassName()`, `document.getElementsByTagName()`
+* `document.getElementsByClassName('X')` is equivalent to `document.querySelectorAll('.X')`
+
+#### .length & .textContent methods
+* The `document.getElementsByClassName('X').length` and `document.querySelectorAll('.X')` both will return the number of nodes within the class name X
+<b><u><i>example :</i></u></b>
+```javascript
+<div id="players">
+        <p id="p1" class="player">Player 1</p>
+        <p id="p2" class="player">Player 2</p>
+</div>
+
+
+document.getElementsByClassName('player')
+&&
+document.querySelectorAll('.player')
+// Will both return 2
+```
+
+*  
+
+
+
+
+
+<hr>
+
 # Working with Objects
 
 #### Creating an Object through a function
