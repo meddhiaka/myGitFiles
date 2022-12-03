@@ -149,3 +149,45 @@ root.render(
     </div>
 )
 ```
+
+<hr>
+
+# 5) Styling In ReactJS
+
+* We can style the document using an external CSS file, and with this attribute `className` in place of `class` that is in classic CSS
+
+<u><b><i> example: </i></b></u>
+
+```javascript
+
+import './index.css'
+
+// Inside <App/> component :
+function App() {
+    return (
+        <h1 className="header">Hello World</h1>
+    )
+} 
+```
+
+* Alternatively, We can also style a specific element with style double object definition, it is called **inner style** in React.JS
+
+<u><b><i> another example: </i></b></u>
+
+```javascript
+function App() {
+    return (
+        <h1 
+        style={
+            {
+            color: "red", 
+            fontSize: "20px", 
+            fontWeight: "600"
+            }
+        }>
+        Hello World
+        </h1>
+    )
+}
+```
+
