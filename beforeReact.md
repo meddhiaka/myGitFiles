@@ -109,7 +109,22 @@ document.querySelectorAll('.player')
 // Will both return 2
 ```
 
-*  
+* `textContent` method will be used when we want the text content of a tag name/class/ID etc .
+<b><u><i>example :</i></u></b>
+```javascript
+<span id="p1-name">Anjana</span>
+
+document.querySelector('#p1-name').textContent
+// This line will result this string 'Anjana'
+
+```
+
+#### Changing the DOM
+
+* `document.title = "new string title"` is used to change the title of the document
+* `document.getElementById('X').textContent = 'new string` is used to change the entire text in the element.
+* `document.getElementById('X').append(' & new texto')` is used to add some new text without changing the old text entirely ...
+
 
 
 
@@ -349,6 +364,36 @@ async function getData(url){
 console.log(await getData("https://dog.ceo/api/breed/hound/list"))
 ```
 
+<hr>
 
+# Event Listeners (click, mouseover & mouseout) and the Event Object ...
+
+* Snippet of code to just remember ...
+```javascript
+// test.html :
+<h1>IDK</h1>
+
+<div id="options">
+    <button name="true" value="true">true</button>
+    <button name="false" value="false">false</button>
+</div>
+
+// main.js :
+const btnTrue = document.getElementsByName('true')
+const h1Elt = document.querySelector('h1')
+
+// getElementsByName() always return an array... be aware
+btnTrue[0].addEventListener('click', () => {
+    btnTrue[0].textContent = 'TRUE'
+})
+
+h1Elt.addEventListener('mouseover', () => {
+    h1Elt.textContent = 'hovering'
+})
+
+h1Elt.addEventListener('mouseout', () => {
+    h1Elt.textContent = 'Quiz.js'
+})
+```
 
 
