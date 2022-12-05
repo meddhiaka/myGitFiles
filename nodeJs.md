@@ -110,3 +110,20 @@ catch (e) {
     console.log(e)
 }
 ```
+
+## CLI 
+
+* Creating a new pure package.json file
+
+#### Specifying the node path in CLI
+
+``#! C:\Program Files\nodejs\node.exe``
+
+#### Choosing the CLI name
+
+* * Adding a new object to package.json file called bin and specifying CLI name equivalent to the root file of the CLI itself
+```
+"bin": {
+    "reddit": "./reddit.mjs"
+} 
+```
