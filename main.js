@@ -10,10 +10,3 @@
 
 // // console.log(getData("https://dog.ceo/api/breed/hound/list"))
 // a()
-
-function multiplyBy2 (x) {
-    return x*2
-}
-
-const a = multiplyBy2(b)
-console.log(a)
