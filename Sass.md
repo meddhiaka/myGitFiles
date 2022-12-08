@@ -83,7 +83,45 @@ input{
 
 * **NB: The ability of writing multiple CSS starting in one SCSS file** 
 
+<hr>
 
 
+# Margin, Padding & Transition in Sass...
 
-27m
+* Padding , Margin And transition can be used like a CSS element
+
+```scss
+// Padding example
+div{
+    background-color: white;
+    padding: {
+        top: 20px;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+    };
+}
+
+// Margin example
+div{
+    background-color: white;
+    margin: {
+        top: 20px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    };
+}
+
+// Transition example
+div{
+    background-color: white;
+    transition: {
+        duration: 2s;
+        property: X;
+        delay: .5s;
+    }
+}
+```
+
+
