@@ -127,3 +127,39 @@ catch (e) {
     "reddit": "./reddit.mjs"
 } 
 ```
+
+<br><br>
+
+## Creating a Low-Level Server
+
+```javascript
+import http from 'http'
+
+let host = 'localhost'
+let port = 8000
+
+let server = http.createServer((request, response) => {
+    // Server activity: Handle request and respond with a callback
+    if (request.method === 'POST') {
+        let body = ''
+        
+        request.on('data', (chunk) => {
+            body += chunk
+        })
+
+        request.on('data', () => {
+            console.log(body)
+        })
+
+        response.write(201)
+        response.end('ok')
+    } else {
+        response.writeHead(200)
+        response.end('hi')
+    }
+})
+
+server.listen(port, host, () => {
+    console.log(`server on ${host}:${port}`)
+})
+```
