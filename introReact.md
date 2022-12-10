@@ -191,3 +191,129 @@ function App() {
 }
 ```
 
+<hr>
+
+# 6) Export syntax & Components
+
+* For repeatly used components like Header, Footer etc., Better solution, Create a folder named Components inside `/src` folder then add the JS components inside of it.
+
+* **Every component is UpperCase written**
+
+```javascript
+function ComponentName () {
+    return (
+        // HTML piece
+    )
+}
+
+export default ComponentName
+
+/* IS EQUIVALENT TO */
+
+export default function ComponentName () {
+    return (
+        // HTML piece
+    )
+}
+
+```
+
+<hr>
+
+# 7) Props
+
+* Props works in children components, And its properties are defined in the main file.
+
+<u><i> example :</i></u>
+
+```javascript
+// Child file
+export default function Card(props) {
+    return (
+        <div>
+            <h1>{props.game}</h1>
+            <h4>{props.info}</h4>
+        </div>
+    )
+}
+
+// Main file
+render(
+    <div>
+        <Card
+         game={"gta5"} 
+         info={"new first person gameplay"}
+         />
+        
+        <Card
+         game={"fifa22"} 
+         info={"sports game"}
+         />
+        
+        <Card
+         game={"cod"} 
+         info={"war game"}
+         />
+    </div>
+)
+
+```
+
+<hr>
+
+# 8) Props with Map (Dynamic)
+
+* **Suppose we have a data file**
+
+```javascript
+// data.js
+export const data = [
+    {
+        title: "cod",
+        desc: "game 1"
+    },
+    {
+        title: "gta 5",
+        desc: "game 2"
+    },
+    {
+        title: "fifa 22",
+        desc: "game 3"
+    }
+]
+```
+
+* **We have also a Card component**
+
+```javascript
+export default function Card(props) {
+    return (
+        <div>
+            <h1>{props.game}</h1>
+            <h4>{props.info}</h4>
+        </div>
+    )
+}
+```
+
+* We want to dynamically create cards in the index file using `data.js` and `the Card Component`, We're gonna use Map JS method and Javascript Semicolons to specify the result. 
+
+```javascript
+import Card from "./Components/Cards"
+import { data } from "./data"
+
+const Cards = data.map((elt) => 
+(<Card
+ game={elt.title} 
+ info={elt.desc}
+ />)
+ )
+
+export default function App() {
+    return(
+            <div>
+                {Cards}
+            </div>
+    )
+}
+```
