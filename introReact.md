@@ -1,4 +1,4 @@
-# 1) React & ReactDOM idea (ignored)
+# 1) Installation & somecode (ignored)
 ### CDN links
 ```
 <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
@@ -28,6 +28,10 @@
 <hr>
 
 # 2) React Render with the permanent way !!!!!
+
+#### To install the ReactApp simply type this command:
+
+##### `npx create-react-app app-name` 
 
 # Just ignore the last one !!!!
 
@@ -317,3 +321,33 @@ export default function App() {
     )
 }
 ```
+
+<hr>
+
+# 9) Eslint & Prettier config for ReactJS
+
+* Installing `eslint` by running this command:
+
+```
+npm install eslint --save-dev
+```
+
+* Installing `eslint plugins` for React
+
+```
+npm install eslint-plugin-react --save-dev
+npm install eslint-plugin-react-hooks --save-dev
+```
+
+* Copying the whole object of `"eslintConfig"` that is inside of `package.json` to the new file named `.eslintrc.json`, After copying we're remove the object after being copied, Then we add the value `"prettier"` to the config.
+
+* Installing Prettier and Prettier Config for eslint
+
+```
+npm install prettier --save-dev --save-exact
+npm install eslint-config-prettier --save-dev
+```
+
+* Creating a two files named `.prettierrc.json` and `.prettierignore`, Then adding this line `/node_modules` to `.prettierrc.json` for the reason of blocking that plugin to not format the files that is inside of the directory `node_modules`.
+
+<hr>
