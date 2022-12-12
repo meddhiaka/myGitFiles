@@ -351,3 +351,133 @@ npm install eslint-config-prettier --save-dev
 * Creating a two files named `.prettierrc.json` and `.prettierignore`, Then adding this line `/node_modules` to `.prettierrc.json` for the reason of blocking that plugin to not format the files that is inside of the directory `node_modules`.
 
 <hr>
+
+# 10) Javascript & Css in the same time
+
+* Here is a snippet of code
+
+```javascript
+    <div
+                style={{
+                    backgroundImage: `url(${props.img_path})`,
+                    width: "300px",
+                    height: "300px",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    borderRadius: "10px"
+                }}>
+    </div>
+```
+
+* The snippet describing the writing of JS and CSS at the same time, At that moment we need to use this trick ` \backtick ${props.var_name} \backtick `
+
+<hr>
+
+# 11) useState()
+
+* useState() is an array composed of a Variable_name and a function called setVariable_name used to set a new state to the initial variable
+
+<u><i>example :</i></u>
+
+```javascript
+import React from 'react'
+
+export default function App() {
+
+    // initial value
+    let [Name, setName] = React.useState("Dhia") 
+    
+    return (
+        <div
+            style={{
+                fontSize: '40px',
+                textAlign: 'center'
+            }}
+            onClick={
+                () => {
+                    setName("Dhia is clicked")
+                }
+            }
+        >
+            {Name}
+        </div>
+    )
+}
+```
+
+<u><i>The yes/no example :</i></u>
+
+```javascript
+export default function App() {
+
+    const [Name, setName] = React.useState("yes") 
+
+    return (
+        <div onClick={
+              () => {setName((v) => (v === "yes" ? "no" : "yes"))}
+            }>
+            {Name}
+        </div>
+    )
+}
+```
+
+<u><i>The yes/no example (Clean code):</i></u>
+
+```javascript
+export default function App() {
+
+    const [Name, setName] = React.useState("yes") 
+
+    return (
+        <div onClick={
+              () => {setName(v => !v)}
+            }>
+            {Name ? "yes" : "no"}
+        </div>
+    )
+}
+```
+
+<br>
+
+<u><i><b>useState() playing with CSS properties and fontAwesome...</b></i></u>
+
+```javascript
+import React from 'react'
+import './Styling/App.css';
+
+
+export default function App() {
+  const [color1, setColor] = React.useState(true)  
+  
+  function toggle() {
+    setColor((v) => !v)
+  }
+
+  return (
+        <div
+          style={{
+            fontSize: '100px',
+            textAlign: 'center',
+            cursor: 'pointer',
+          }}
+          onClick={
+            toggle
+          }
+        >
+            <i 
+              className="fa-solid fa-star" 
+              style={{
+                color: color1 ? '' : 'gold'
+              }}
+            >
+            </i>
+        </div>
+    )
+}
+```
+
+*
+
+<hr>
